@@ -1,0 +1,9 @@
+﻿id,age,gender,income,marriage,buy_house
+1,27,male,15W,no,no
+2,47,female,30W,yes,yes
+3,32,male,12W,no,no
+4,24,male,45W,no,yes
+5,45,male,30W,yes,no
+6,56,male,32W,yes,yes
+7,31,male,15W,no,no
+8,23,female,30W,yes,no
