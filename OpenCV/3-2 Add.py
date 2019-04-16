@@ -1,6 +1,5 @@
 import numpy as np
 import cv2 as cv
-import channel
 
 # g (x) = (1 − α)f 0 (x) + αf 1 (x)
 
