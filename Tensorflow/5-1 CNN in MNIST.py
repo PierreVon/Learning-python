@@ -35,7 +35,8 @@ y = tf.placeholder(tf.float32, [None, 10])
 x_image = tf.reshape(x, [-1, 28, 28, 1])
 
 # initialize first convolution layer's weights and biases
-# 5*5 simple window, extracting features from 1 plane by 32 kernels
+# 5*5 simple window, extracting features from 1 plane by 4 kernels
+# third 1 is 1-channel
 W_conv1 = weight_variable([5, 5, 1, 4])
 # every bias to every kernel
 b_conv1 = bias_variable([4])
@@ -46,7 +47,7 @@ h_pool1 = max_pool_2x2(h_conv1)
 
 
 # initialize second convolution layer's weights and biases
-# 5*5 simple window, extracting features from 32 planes by 64 kernels
+# 5*5 simple window, extracting features from 4 planes by 8 kernels
 W_conv2 = weight_variable([5, 5, 4, 8])
 b_conv2 = bias_variable([8])
 
@@ -55,7 +56,7 @@ h_pool2 = max_pool_2x2(h_conv2)
 
 # original picture' size is 28*28, after first convolution becomes to 28*28, after first pooling changes to 14*14
 # second convolution changes to 14*14, second pooling changes to 7*7
-# now we get 64 planes of 7*7
+# now we get 8 planes of 7*7
 
 # initialize first fully connected layer
 # former layer has 7*7*64 neurons

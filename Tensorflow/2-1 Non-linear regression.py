@@ -35,3 +35,4 @@ with tf.Session() as sess:
     plt.scatter(x_data,y_data)
     plt.plot(x_data, prediction_value, 'r-', lw=5)
     plt.show()
+    
