@@ -59,7 +59,7 @@ h_pool2 = max_pool_2x2(h_conv2)
 # now we get 8 planes of 7*7
 
 # initialize first fully connected layer
-# former layer has 7*7*64 neurons
+# former layer has 7*7*8 neurons
 W_fc1 = weight_variable([7*7*8, 100])
 b_fc1 = bias_variable([100])
 

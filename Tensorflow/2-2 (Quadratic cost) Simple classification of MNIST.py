@@ -19,7 +19,7 @@ loss = tf.reduce_mean(tf.square(y - prediction))
 train_step = tf.train.GradientDescentOptimizer(0.2).minimize(loss)
 
 # calculate accuracy
-correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(prediction, 1))
+correct_prediction = tf.equal(y, prediction)
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 with tf.Session() as sess:
